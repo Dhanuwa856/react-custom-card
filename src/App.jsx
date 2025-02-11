@@ -13,6 +13,8 @@ const App = () => {
             article. It's a short summary of the article. It's a short summary of
             the article. It's a short summary of the article."
         post_url="https://unsplash.com/s/photos/nature"
+        primaryColor="#000" // Your custom primary color
+        secondaryColor="#f8f8f8" // Your custom secondary color
       />
     </div>
   );
