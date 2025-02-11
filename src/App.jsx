@@ -13,9 +13,18 @@ const App = () => {
             article. It's a short summary of the article. It's a short summary of
             the article. It's a short summary of the article."
         post_url="https://unsplash.com/s/photos/nature"
-        primaryColor="#000" // Your custom primary color
-        secondaryColor="#f8f8f8" // Your custom secondary color
       />
+      <Card
+        image_url="https://images.squarespace-cdn.com/content/v1/54822a56e4b0b30bd821480c/45ed8ecf-0bb2-4e34-8fcf-624db47c43c8/Golden+Retrievers+dans+pet+care.jpeg"
+        category="animals"
+        post_title="  Blog Post 2"
+        post_description=" This is the excerpt for blog post 2. It's a short summary of the
+            article. It's a short summary of the article. It's a short summary of
+            the article. It's a short summary of the article."
+        post_url="https://unsplash.com/s/photos/nature"
+      />
+      <br />
+      <br />
     </div>
   );
 };

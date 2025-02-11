@@ -6,16 +6,19 @@ const Card = ({
   post_title,
   post_description,
   post_url,
-  primaryColor = "#06b6d4", // Default: Tailwind cyan-500
-  secondaryColor = "#10b981", // Default: Tailwind emerald-600
+  primaryColor = "#0D92F4", // Default
+  secondaryColor = "#3D8D7A", // Default
+  cardWidth = "max-w-xs", // Customizable Tailwind width class
+  cardHeight = "h-[400px]", // Customizable Tailwind height class
 }) => {
   return (
-    // Outer wrapper with group for hover effects.
-    <div className="group relative max-w-xs h-[400px] mx-auto mt-20 rounded-4xl overflow-hidden shadow-lg bg-white">
-      {/* 
+    // Outer wrapper with group for hover effects. The width and height can be customized.
+    <div
+      className={`group relative ${cardWidth} ${cardHeight} mx-auto mt-20 rounded-4xl overflow-hidden shadow-lg bg-white`}
+    >
+      {/*
         Gradient overlay that scales up from the bottom left on hover.
-        The background is defined via inline styles so that it can use
-        the custom colors passed in as props.
+        The background is defined via inline styles to use the custom colors.
       */}
       <div
         className="absolute inset-0 transform scale-0 group-hover:scale-100 transition-transform duration-700 origin-bottom-left rounded-4xl"
@@ -24,15 +27,16 @@ const Card = ({
         }}
       ></div>
 
-      {/* 
-        Content container. Its background becomes transparent on hover to reveal the overlay.
+      {/*
+        Content container. Its background fades from white to transparent on hover,
+        revealing the underlying gradient overlay.
       */}
       <div className="relative bg-white group-hover:bg-transparent transition-colors duration-700">
         <div className="relative">
           <img
             src={image_url}
             alt=""
-            className="w-full p-2 rounded-4xl object-cover object-center transition duration-700 grayscale-25 group-hover:grayscale-0"
+            className="w-full h-[220px] p-2 rounded-4xl object-cover object-center transition duration-700 grayscale-25 group-hover:grayscale-0"
           />
           <span className="absolute top-5 right-6 bg-white w-fit px-3 py-1 capitalize rounded-full text-sm font-bold text-gray-800">
             {category}
